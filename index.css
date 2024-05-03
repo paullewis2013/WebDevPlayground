@@ -4,36 +4,47 @@ body, html {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 html::-webkit-scrollbar {
     display: none;
 }
 
-canvas {
+#backgroundCanvas {
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
+}
+
+#canvasdiv {
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    margin: 0;
 }
 
 .full-width-div {
     width: 100%;   /* Spans the full width of the viewport */
-    padding: 80px; /* Optional: Adds some padding inside the div */
+    padding-top: 80px; /* Optional: Adds some padding inside the div */
+    padding-bottom: 80px;
     z-index: 1;
     margin-top: 50px;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .wave {
     --s: .25em; /* control the wave*/
   
-    background-color: #fb9f80;
+    background-color: #6397e1;
     --_s: calc(var(--s)*4) 51% repeat-x;
     --_r: calc(1.345*var(--s)) at left 50%;
     --_g1: #000 99%,#0000 101%;
